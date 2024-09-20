@@ -1,0 +1,43 @@
+.blinking-border {
+    animation: blinkingBorder 1s infinite;
+}
+
+@keyframes blinkingBorder {
+    0% {
+        border: 5px solid transparent;
+    }
+    50% {
+        border: 5px solid blue;
+    }
+    100% {
+        border: 5px grey;
+    }
+
+}
+.custom-checkbox {
+    appearance: none;
+    width: 1.25em;
+    height: 1.25em;
+    border: 2px solid black;
+    border-radius: 0.25em;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.custom-checkbox:checked {
+    background-color: black;
+    border-color: black;
+}
+
+.custom-checkbox:checked::before {
+    content: '';
+    position: absolute;
+    top: 0.1em;
+    left: 0.35em;
+    width: 0.25em;
+    height: 0.5em;
+    border: black;
+    border-width: 0 0.2em 0.2em 0;
+    transform: rotate(45deg);
+}
